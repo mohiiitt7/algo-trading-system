@@ -2,4 +2,7 @@ pandas
 numpy
 fastapi
 uvicorn
+streamlit
+plotly
 pytest
+streamlit-autorefresh

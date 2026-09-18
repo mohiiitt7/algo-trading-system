@@ -25,6 +25,28 @@ def test_buy_order():
     assert broker.get_positions()["TEST"]["average_price"] == 100
 
 
+def test_buy_orders_update_weighted_average_price():
+    broker = MockBroker(initial_balance=100000)
+
+    broker.place_order(
+        symbol="TEST",
+        side="BUY",
+        quantity=10,
+        price=100,
+    )
+    broker.place_order(
+        symbol="TEST",
+        side="BUY",
+        quantity=10,
+        price=120,
+    )
+
+    position = broker.get_positions()["TEST"]
+
+    assert position["quantity"] == 20
+    assert position["average_price"] == 110
+
+
 def test_sell_order():
     broker = MockBroker(initial_balance=100000)
 

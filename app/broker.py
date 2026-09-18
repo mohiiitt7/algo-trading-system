@@ -69,8 +69,13 @@ class MockBroker:
                 self.balance -= order_value
 
                 if symbol in self.positions:
-
-                    self.positions[symbol]["quantity"] += quantity
+                    position = self.positions[symbol]
+                    current_quantity = position["quantity"]
+                    position["average_price"] = (
+                        (current_quantity * position["average_price"])
+                        + order_value
+                    ) / (current_quantity + quantity)
+                    position["quantity"] += quantity
 
                 else:
 
