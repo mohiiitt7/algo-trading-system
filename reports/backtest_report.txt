@@ -1,0 +1,25 @@
+MINI ALGO TRADING SYSTEM
+========================
+
+Strategy: Moving Average Crossover
+
+Initial Balance: ₹100000.00
+Final Balance: ₹100037.60
+Total PnL: ₹37.60
+Total Trades: 1
+Winning Trades: 1
+Losing Trades: 0
+Win Rate: 100.00%
+
+TRADE HISTORY
+=============
+
+Trade 1
+Entry Time: 2026-01-01 10:15:00
+Exit Time: 2026-01-01 10:20:00
+Entry Price: ₹94
+Exit Price: ₹97.76
+Quantity: 10
+PnL: ₹37.60
+Exit Reason: take_profit
+
